@@ -1,1 +1,10 @@
 @import "tailwindcss";
+:root{
+  --back-ground-primary:#121927;
+  --border: #232c3c;
+  --text: #ffffff;
+}
+
+body {
+  font-family: "Onest", sans-serif;
+}
