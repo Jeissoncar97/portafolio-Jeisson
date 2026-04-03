@@ -2,7 +2,9 @@
 :root{
   --back-ground-primary:#121927;
   --border: #232c3c;
-  --text: #ffffff;
+  --text-white: #ffffff;
+  --text-black: #000000;
+  --green-htb: #9fef00;
 }
 
 body {
