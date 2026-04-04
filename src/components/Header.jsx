@@ -32,7 +32,7 @@ const Header = () => {
 						</li>
 						<li className="flex justify-center w-full first:mt-5 md:first:mt-0 md:block md:w-auto">
 							<a
-								href="#experiencia"
+								href="#experience"
 								onClick={closeMenu}
 								className="flex items-center md:w-auto justify-center gap-2 md:px-4 md:py-2  hover:bg-gray-900 rounded-2xl border border-transparent hover:border-gray-700 transition-all min-h-12.5 text-lg px-5 py-4 duration-300 w-full"
 							>
