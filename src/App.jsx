@@ -1,25 +1,17 @@
-import "./App.css";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import AboutMe from "./components/AboutMe";
-import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Blog from "./pages/Blog";
+import Post from "./components/blog/Post";
 
 function App() {
 	return (
-		<div className=" bg-(--back-ground-primary) text-white mx-auto ">
-			<div className="mx-auto">
-				<Header />
-				<div className="px-4">
-					<Hero />
-					<Projects />
-					<Experience />
-					<AboutMe />
-					<Footer />
-				</div>
-			</div>
-		</div>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/blog" element={<Blog />} />
+				<Route path="/blog/:slug" element={<Post />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
 

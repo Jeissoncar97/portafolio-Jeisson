@@ -35,7 +35,9 @@ const Projects = () => {
 								publicados en foro propio.
 							</div>
 							<a
-								href="#"
+								href="/blog"
+								target="_blank"
+								rel="noopener noreferrer"
 								className="inline-flex items-center justify-center gap-2 px-4 py-1 transition  border  rounded-full bg-gray-800 border-gray-600 text-(--green-htb) text-md hover:bg-gray-900 hover:border-gray-700 group max-w-fit focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black-800 absolute bottom-0 right-0 mb-4 mr-4"
 							>
 								Ir
