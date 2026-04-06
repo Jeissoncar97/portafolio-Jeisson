@@ -3,7 +3,8 @@ import { posts } from "../data/posts";
 
 function Blog() {
 	return (
-		<div className="p-4">
+		<div className="bg-(--back-ground-primary) text-white mx-auto">
+			<div className="p-4 ">
 			<h1 className="text-3xl font-bold mb-4">Blog 🚀</h1>
 
 			{posts.map((post) => (
@@ -21,6 +22,7 @@ function Blog() {
 					</Link>
 				</div>
 			))}
+		</div>
 		</div>
 	);
 }
