@@ -1,52 +1,64 @@
 import { Link } from "react-router-dom";
 import { posts } from "../data/posts";
+import Hongo from "../assets/image-foro/hongo.svg";
 
 function Blog() {
 	return (
 		<div className="bg-(--back-ground-primary) text-white mx-auto max-w-7xl">
 			<div className="p-4 ">
 				<div className="max-w-full mx-auto mb-10">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Dignissimos laborum iure non doloremque itaque, temporibus
-					modi, ducimus cupiditate consectetur tenetur, reprehenderit
-					fuga amet voluptatibus dolorem repudiandae aliquid hic
-					consequatur totam. Cum ut quidem quae fugit ipsum quis velit
-					dolorum sequi alias hic sit explicabo ab nam numquam,
-					blanditiis modi ipsa placeat ratione excepturi tenetur
-					inventore. Molestiae reprehenderit consequatur nihil
-					corrupti! Vel accusamus fuga rem mollitia voluptatibus
-					voluptate eligendi inventore, incidunt laboriosam earum
-					eveniet et nihil non dolorem obcaecati quasi officiis harum
-					necessitatibus atque pariatur error esse cum. Veniam,
-					adipisci fuga. Fuga quos veritatis culpa perferendis harum
-					aperiam nesciunt quaerat veniam, rerum qui, labore nisi eius
-					rem cumque illo ipsum necessitatibus nam facilis in.
-					Laudantium quidem placeat minus dicta vel laborum! Dolore
-					tempora ducimus tempore unde laborum aliquam rem architecto
-					minus quidem amet facere in voluptatum consequatur
-					necessitatibus perferendis neque temporibus perspiciatis
-					culpa corrupti, distinctio libero ab voluptates deserunt
-					fuga! Corporis! Quis tenetur, ab qui vero mollitia dolore
-					eos, velit, impedit accusantium dolor optio nostrum ullam?
-					Placeat deleniti consequuntur excepturi voluptatum. Officia
-					quas veniam ex quod explicabo nemo tempore temporibus
-					quaerat. Voluptatem, eveniet nam eligendi ratione eius iure
-					tempora mollitia ad amet officiis ut quibusdam cum ipsum
-					incidunt pariatur beatae nemo voluptas cumque placeat
-					perspiciatis ipsam rem iusto obcaecati ullam? Veniam.
-					Voluptatem nam soluta quasi repellat maxime doloribus
-					maiores, adipisci rem illum obcaecati delectus molestias
-					fugiat ipsa atque explicabo impedit corporis dolore eos
-					voluptatibus optio vitae quia! Facere quos sit alias?
-					Pariatur, dolore magni tempora non natus aliquid, maiores
-					earum ipsa ab asperiores possimus. Veniam repudiandae
-					praesentium nemo perspiciatis necessitatibus dicta ipsam
-					laboriosam et est exercitationem corporis tempore, doloribus
-					quasi odio? Eveniet, ut? Dicta itaque suscipit quibusdam,
-					laborum illum temporibus minus sunt praesentium, sapiente
-					reiciendis cupiditate. Pariatur corporis consequuntur ab
-					nisi, optio quod quaerat suscipit, dolor tenetur modi aut,
-					ipsam consectetur.s
+					<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+						{/* Grande */}
+						<div className="md:col-span-1 bg-slate-900 p-6 rounded-2xl">
+							<div className="flex flex-col items-center gap-4">
+								<img src={Hongo} alt="" />
+								<p className="text-(--text-gray-claro) font-semibold">
+									Hack the box rank
+								</p>
+								<h3 className="font-bold text-3xl">Noob</h3>
+								<div className="">
+									<div className="flex justify-between">
+										<p>Content Ownership</p>
+										<p className="text-(--text-gray-claro)">
+											3.05%
+										</p>
+									</div>
+									<div className="relative w-full h-2 bg-slate-800 rounded-full">
+										<div
+											className="absolute top-1/2 -translate-y-1/2 h-2 bg-(--green-htb) rounded-full"
+											style={{ width: "3%" }}
+										/>
+										<div className="absolute top-1/2 -translate-y-1/2 left-0 w-2 h-2 bg-(--green-htb) rounded-full"></div>
+									</div>
+								</div>
+							</div>
+							<div className="mt-6 flex flex-col gap-4">
+								<div className=" w-full bg-gray-400 p-6">
+									<h4>#969</h4>
+									<p>Global Ranking</p>
+								</div>
+								<div className=" w-full flex justify-between">
+									<div className=" bg-gray-400 p-6">
+										<h4>1</h4>
+										<p>Points</p>
+									</div>
+									<div className=" bg-gray-400 p-6">
+										<h4>6</h4>
+										<p>Flags</p>
+									</div>
+									<div className=" bg-gray-400 p-6">
+										<h4>--</h4>
+										<p>Blods</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="md:col-span-2 bg-slate-800 p-6 rounded-2xl">
+							Contenido grande
+						</div>
+
+						{/* Pequeño */}
+					</div>
 				</div>
 
 				{posts.map((post) => (
