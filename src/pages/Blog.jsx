@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { posts } from "../data/posts";
 import Hongo from "../assets/image-foro/hongo.svg";
+import Profile from "../assets/image-foro/profile.webp";
+import bgHTB from "../assets/image-foro/bg-HTB.svg";
 
 function Blog() {
 	return (
@@ -34,59 +36,93 @@ function Blog() {
 							<div className="mt-6 flex flex-col gap-2">
 								<div className="  bg-(--bg-secondary-blog) p-4 rounded-xl">
 									<h4 className="font-bold">#969</h4>
-									<p className="text-(--text-gray-claro)">Global Ranking</p>
+									<p className="text-(--text-gray-claro)">
+										Global Ranking
+									</p>
 								</div>
 								<div className="flex justify-between">
 									<div className="w-1/3 bg-(--bg-secondary-blog) p-4 rounded-xl">
 										<h4 className="font-bold">1</h4>
-										<p className="text-(--text-gray-claro)">Points</p>
+										<p className="text-(--text-gray-claro)">
+											Points
+										</p>
 									</div>
 									<div className="w-1/3 ml-2 bg-(--bg-secondary-blog) p-4 rounded-xl">
 										<h4 className="font-bold">6</h4>
-										<p className="text-(--text-gray-claro)">Flags</p>
+										<p className="text-(--text-gray-claro)">
+											Flags
+										</p>
 									</div>
 									<div className="w-1/3 ml-2 bg-(--bg-secondary-blog) p-4 rounded-xl">
 										<h4 className="font-bold">--</h4>
-										<p className="text-(--text-gray-claro)">Blods</p>
+										<p className="text-(--text-gray-claro)">
+											Blods
+										</p>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div className="flex flex-col justify-around lg:col-span-2 bg-linear-to-br from-(--bg-secondary-blog) to-(--bg-secondary-blog)/10 p-6 rounded-2xl">
-							<h2 className="text-xl font-bold mb-4">Season 10 Progress</h2>
+							<h2 className="text-xl font-bold mb-4">
+								Season 10 Progress
+							</h2>
 							<div className="bg-(--bg-secondary-blog) p-4 rounded-xl">
 								<div className="flex justify-between py-4">
 									<div>
 										<h4 className="font-bold">--</h4>
-										<p className="text-(--text-gray-claro)">Seasson 10 Rank</p>
+										<p className="text-(--text-gray-claro)">
+											Seasson 10 Rank
+										</p>
 									</div>
 									<div className="flex">
 										<div className="px-4">
-											<p className="text-(--text-gray-claro)">Points</p>
+											<p className="text-(--text-gray-claro)">
+												Points
+											</p>
 											<h4 className="font-bold">--</h4>
 										</div>
 										<div className="px-4">
-											<p className="text-(--text-gray-claro)">User Solves</p>
+											<p className="text-(--text-gray-claro)">
+												User Solves
+											</p>
 											<h4 className="font-bold">--</h4>
 										</div>
 										<div className="px-4">
-											<p className="text-(--text-gray-claro)">System Solves</p>
+											<p className="text-(--text-gray-claro)">
+												System Solves
+											</p>
 											<h4 className="font-bold">--</h4>
 										</div>
 									</div>
 								</div>
-								<div>
-									<div>
-										<div>
-											<img src="" alt="" />
+								<div className="flex justify-between">
+									<div className="flex gap-4">
+										<div className=" w-24 h-24 flex items-center justify-center">
+											<img
+												src={bgHTB}
+												alt=""
+												className=""
+											/>
+											<img
+												src={Profile}
+												alt="profile"
+												className="w-12 h-12 rounded-full object-cover absolute"
+											/>
 										</div>
-										<div>
-											<p>Unranked</p>
-											<h3>hassam68</h3>
+										<div className="flex flex-col justify-center">
+											<p className="text-xl">Unranked</p>
+											<h3 className="text-3xl font-semibold">
+												hassam68
+											</h3>
 										</div>
 									</div>
-									<div>
-										<a href="#">View Profile</a>
+									<div className="content-center mx-4">
+										<a
+											href="#"
+											className="text-sm font-bold px-6 py-3 bg-[#262f40] hover:bg-[#2f3b4e] rounded-md transition-colors duration-300"
+										>
+											View Profile
+										</a>
 									</div>
 								</div>
 							</div>
@@ -112,7 +148,6 @@ function Blog() {
 					</div>
 				))}
 			</div>
-			
 		</div>
 	);
 }
