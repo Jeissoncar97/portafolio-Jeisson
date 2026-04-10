@@ -1,19 +1,20 @@
 import { useParams } from "react-router-dom";
-import { posts } from "../../data/posts";
+import ReactMarkdown from "react-markdown";
+import { posts } from "../../Posts/posts";
+import rehypeHighlight from "rehype-highlight";
 
-function Post() {
-	const { slug } = useParams();
+export default function Post() {
+  const { slug } = useParams();
 
-	const post = posts.find((p) => p.slug === slug);
+  const content = posts[slug];
 
-	if (!post) return <h1>Post no encontrado</h1>;
+  if (!content) {
+    return <p>Post no encontrado</p>;
+  }
 
-	return (
-		<div>
-			<h1>{post.title}</h1>
-			<p>{post.content}</p>
-		</div>
-	);
+  return (
+    <div className="prose prose-invert max-w-4xl mx-auto p-6">
+      <ReactMarkdown  rehypePlugins={[rehypeHighlight]}>{content}</ReactMarkdown>
+    </div>
+  );
 }
-
-export default Post;

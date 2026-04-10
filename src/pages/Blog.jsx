@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
-import { posts } from "../data/posts";
 import Hongo from "../assets/image-foro/hongo.svg";
 import Profile from "../assets/image-foro/profile.webp";
 import bgHTB from "../assets/image-foro/bg-HTB.svg";
+import Machines from "../components/Machines";
+
+
+import Cap from "../assets/image-foro/machines/cap.png";
+
 
 function Blog() {
 	return (
@@ -63,7 +67,14 @@ function Blog() {
 							</div>
 						</div>
 						<div className="flex flex-col justify-around lg:col-span-2 bg-linear-to-br from-(--bg-secondary-blog) to-(--bg-secondary-blog)/10 p-6 rounded-2xl">
-							<h2 className="text-xl font-bold mb-4">
+							<h2 className="text-(--green-htb) text-xl font-bold mb-4">Bienvenido a mi laboratorio ⚡</h2>
+							<p className="max-w-4xl pb-2">Este no es solo un blog, es un espacio donde documento mi proceso, mis errores y mis aprendizajes en el mundo de la ciberseguridad y el hacking ético.</p>
+							<p className="max-w-4xl pb-2">Aquí encontrarás writeups de máquinas, análisis de vulnerabilidades y distintas formas de abordar problemas reales, siempre desde una perspectiva práctica. No se trata solo de llegar a la solución, sino de entender el camino, cuestionar cada paso y mejorar constantemente.</p>
+							<p className="max-w-4xl pb-2">Mi objetivo con este sitio es simple: aprender haciendo y compartirlo contigo.
+Si estás empezando, esto puede servirte como guía.
+Si ya tienes experiencia, quizás encuentres nuevas formas de pensar.</p>
+							<p className="max-w-4xl pb-2">Bienvenido. 🚀</p>
+							<h2 className="text-(--green-htb) text-xl font-bold mb-4">
 								Season 10 Progress
 							</h2>
 							<div className="bg-(--bg-secondary-blog) p-4 rounded-xl">
@@ -95,7 +106,7 @@ function Blog() {
 										</div>
 									</div>
 								</div>
-								<div className="flex justify-between">
+								<div className="flex justify-between flex-col lg:flex-row items-end">
 									<div className="flex gap-4">
 										<div className=" w-24 h-24 flex items-center justify-center">
 											<img
@@ -116,7 +127,7 @@ function Blog() {
 											</h3>
 										</div>
 									</div>
-									<div className="content-center mx-4">
+									<div className="content-center mx-4 my-4 lg:my-0">
 										<a
 											href="#"
 											className="text-sm font-bold px-6 py-3 bg-[#262f40] hover:bg-[#2f3b4e] rounded-md transition-colors duration-300"
@@ -131,22 +142,33 @@ function Blog() {
 						{/* Pequeño */}
 					</div>
 				</div>
+							<Machines
+								machines={[
+									{
+									img: Cap,
+									name: "Cap",
+									difficulty: "Easy",
+									os: "Linux",
+									rating: "2.5",
+									userSolves: "100",
+									systemSolves: "200",
+									date: "2024-01-01",
+									values: [90, 80, 70, 60, 50, 40, 30, 20, 10, 5],
+									},
+									{
+									name: "another",
+									difficulty: "Medium",
+									os: "Windows",
+									rating: "4.0",
+									userSolves: "500",
+									systemSolves: "300",
+									date: "2024-02-01",
+									values: [60, 50, 40, 30, 20, 10, 5, 5, 2, 1],
+									},
+								]}
+							/>
 
-				{posts.map((post) => (
-					<div key={post.slug} className="mb-6 border-b pb-4">
-						<h2 className="text-xl font-semibold">{post.title}</h2>
-						<p className="text-sm opacity-70">{post.date}</p>
-						<p className="mt-2">{post.excerpt}</p>
-
-						{/* 👇 AQUÍ VA EL LINK */}
-						<Link
-							to={`/blog/${post.slug}`}
-							className="text-green-400 mt-2 inline-block"
-						>
-							Leer más →
-						</Link>
-					</div>
-				))}
+				
 			</div>
 		</div>
 	);
