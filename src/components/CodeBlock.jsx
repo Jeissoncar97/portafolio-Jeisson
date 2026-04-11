@@ -26,7 +26,7 @@ export default function CodeBlock({ children }) {
     <div className="relative group">
       <button
         onClick={handleCopy}
-        className="absolute z-10 px-2 py-1 text-xs text-white transition-colors bg-gray-700 rounded cursor-pointer top-2 right-2 hover:bg-gray-600"
+        className="absolute z-10 px-2 py-1 text-xs text-white transition-colors bg-gray-700 rounded cursor-pointer top-7 right-4 hover:bg-gray-600"
       >
         <span className="material-symbols-outlined text-sm!">
           {copied ? "check" : "content_copy"}

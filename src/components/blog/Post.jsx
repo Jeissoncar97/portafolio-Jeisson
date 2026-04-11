@@ -27,7 +27,7 @@ export default function Post() {
 							<img
 								src={src}
 								alt={alt}
-								className="w-full max-w-2xl mx-auto my-4 rounded-xl"
+								className="w-full mx-auto my-4 rounded-xl"
 							/>
 						),
 						pre: CodeBlock,

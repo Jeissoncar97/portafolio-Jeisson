@@ -4,29 +4,29 @@ import Profile from "../assets/image-foro/profile.webp";
 import bgHTB from "../assets/image-foro/bg-HTB.svg";
 import Machines from "../components/Machines";
 
-import Cap from "../assets/image-foro/machines/cap.png";
+import Archetype from "../assets/image-foro/machines/archetype.png";
 
 function Blog() {
 	return (
 		<div className="bg-(--back-ground-primary) text-white mx-auto ">
 			<div className="px-4 py-10 xl:px-40">
 				<div className="max-w-full mx-auto mb-10">
-					<div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+					<div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
 						<div className="md:col-span-1 bg-linear-to-br from-(--bg-secondary-blog) to-(--bg-secondary-blog)/10 p-6 rounded-2xl">
 							<div className="flex flex-col items-center gap-4">
 								<img src={Hongo} alt="" />
 								<p className="text-(--text-gray-claro) font-semibold">
 									Hack the box rank
 								</p>
-								<h3 className="font-bold text-3xl">Noob</h3>
-								<div className="w-full flex flex-col gap-2">
+								<h3 className="text-3xl font-bold">Noob</h3>
+								<div className="flex flex-col w-full gap-2">
 									<div className="flex justify-between">
 										<p>Content Ownership</p>
 										<p className="text-(--text-gray-claro)">
 											3.05%
 										</p>
 									</div>
-									<div className="relative w-full h-2 bg-slate-800 rounded-full">
+									<div className="relative w-full h-2 rounded-full bg-slate-800">
 										<div
 											className="absolute top-1/2 -translate-y-1/2 h-2 bg-(--green-htb) rounded-full"
 											style={{ width: "3%" }}
@@ -35,7 +35,7 @@ function Blog() {
 									</div>
 								</div>
 							</div>
-							<div className="mt-6 flex flex-col gap-2">
+							<div className="flex flex-col gap-2 mt-6">
 								<div className="  bg-(--bg-secondary-blog) p-4 rounded-xl">
 									<h4 className="font-bold">#969</h4>
 									<p className="text-(--text-gray-claro)">
@@ -94,8 +94,8 @@ function Blog() {
 								Season 10 Progress
 							</h2>
 							<div className="bg-(--bg-secondary-blog) p-4 rounded-xl">
-								<div className="flex justify-between py-4 flex-col sm:flex-row">
-									<div className="px-4  border-b border-gray-400 sm:border-b-0 sm:px-0 mb-10">
+								<div className="flex flex-col justify-between py-4 sm:flex-row">
+									<div className="px-4 mb-10 border-b border-gray-400 sm:border-b-0 sm:px-0">
 										<h4 className="font-bold">--</h4>
 										<p className="text-(--text-gray-claro)">
 											Seasson 10 Rank
@@ -122,9 +122,9 @@ function Blog() {
 										</div>
 									</div>
 								</div>
-								<div className="flex justify-between flex-col lg:flex-row items-end">
+								<div className="flex flex-col items-end justify-between lg:flex-row">
 									<div className="flex gap-4">
-										<div className=" w-24 h-24 flex items-center justify-center">
+										<div className="flex items-center justify-center w-24 h-24 ">
 											<img
 												src={bgHTB}
 												alt=""
@@ -133,7 +133,7 @@ function Blog() {
 											<img
 												src={Profile}
 												alt="profile"
-												className="w-12 h-12 rounded-full object-cover absolute"
+												className="absolute object-cover w-12 h-12 rounded-full"
 											/>
 										</div>
 										<div className="flex flex-col justify-center">
@@ -158,28 +158,20 @@ function Blog() {
 				</div>
 				<Machines
 					machines={[
+						
 						{
-							img: Cap,
-							name: "Cap",
-							difficulty: "Easy",
-							os: "Linux",
-							rating: "2.5",
-							userSolves: "100",
-							systemSolves: "200",
-							date: "2024-01-01",
-							values: [90, 80, 70, 60, 50, 40, 30, 20, 10, 5],
-						},
-						{
-							name: "another",
-							difficulty: "Medium",
+							img: Archetype,
+							name: "archetype",
+							difficulty: "Very Easy",
 							os: "Windows",
-							rating: "4.0",
-							userSolves: "500",
-							systemSolves: "300",
-							date: "2024-02-01",
-							values: [60, 50, 40, 30, 20, 10, 5, 5, 2, 1],
+							rating: "4.1",
+							userSolves: "540",
+							systemSolves: "354",
+							date: "2026-11-04",
+							values: [20, 30, 80, 70, 60, 25, 20, 5, 5, 5],
 						},
 					]}
+
 				/>
 			</div>
 		</div>
